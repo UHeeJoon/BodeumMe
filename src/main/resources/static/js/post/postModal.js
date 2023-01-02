@@ -18,7 +18,7 @@ function check() {
 
 function go(e) {
     e.preventDefault();
-    if ($('input[type=checkbox]:checked').length) {
+    if ($('input[type=checkbox]:checked')?.length) {
         input_category = [];
         $('input[type=checkbox]:checked').each(function (index, iVal) {
                 input_category.push(iVal.value);
