@@ -6,8 +6,8 @@ $(document).ready(function () {
 
 
 function check() {
-    $('input[type=checkbox]').on("click", function () {
-        let count = $('input:checked[type="checkbox"]').length;
+    $('input[type=checkbox]')?.on("click", function () {
+        let count = $('input:checked[type="checkbox"]')?.length;
         if (count > 5) {
             $(this).prop("checked", false);
             alert("5개 까지만 선택할 수 있습니다.");
@@ -25,7 +25,7 @@ function go(e) {
             }
         )
     }
-    if ($('input[type=radio]:checked').length) {
+    if ($('input[type=radio]:checked')?.length) {
         input_budget = $('input[type=radio]:checked')[0]?.value;
     }
     if (input_category.length === 0 && input_budget === 999999999) {

@@ -6,7 +6,7 @@ $(document).ready(function () {
         $("#boarder").append(`
             
             <article class="board-article">
-                <a href="/gig/426333" class="board-link">
+                <a href="#" class="board-link">
                     <div class="board-img">
                         <div class="img-box">
                             <div class="img-wrapper">
