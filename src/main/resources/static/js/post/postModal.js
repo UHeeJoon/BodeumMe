@@ -32,8 +32,8 @@ function go(e) {
         alert("1개 이상 체크해 주세요");
         return;
     }
-    $($('.modal').siblings()[0]).data("modal", "not-expand");
-    $('.modal').remove();
+    $($('.modal').siblings()[0])?.data("modal", "not-expand");
+    $('.modal')?.remove();
     location.href = `/post/sort?category=${input_category.join(',')}&budget=${input_budget}`
 }
 

@@ -13,6 +13,14 @@ html{
     line-height: normal;
     -webkit-text-size-adjust: 100%;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+}
 .content a {
     background-color: transparent;
 }
@@ -20,11 +28,11 @@ html{
     color: -webkit-link;
     cursor: pointer;
 }
-.content img {
+img {
     border-style: none;
 }
 
-.content img {
+img {
     overflow-x: hidden;
     overflow-y: hidden;
     overflow-clip-margin: content-box;
@@ -33,7 +41,7 @@ html{
     overflow-clip-margin: content-box;
     overflow: hidden;
 }
-.content p{
+.content .wrapper p{
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -43,11 +51,11 @@ html{
 .content article, div {
     display: block;
 }
-.content ul{
+ul{
     margin: 0;
     padding: 0;
 }
-.content li{
+li{
     list-style: none;
     display: list-item;
     text-align: -webkit-match-parent;

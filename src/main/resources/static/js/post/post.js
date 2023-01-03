@@ -1,7 +1,13 @@
-/*<![CDATA[*/
 $(document).ready(function () {
+    categories.forEach(category =>{
+        $('.field-wrapper-ul').append(li(category));
+    })
     // console.log(/*[[${post}]]*/)
-    // console.log(post)
+    // console.log(post.length)
+    if(post.length === 0) {
+        $("#boarder").append('<h3>게시글이 없습니다...</h3>')
+        return;
+    }
     for (let i = 0; i < 36; i++) {
         $("#boarder").append(`
             
@@ -31,14 +37,14 @@ $(document).ready(function () {
                         <div class="board-field-task-area">
                             <span class="task">PAGE10</span>
                         </div>
-                        <h3 class="board-field-title">단순 업무관리 서비스</h3>
+                        <h3 class="board-field-title">${post[i].postTitle}</h3>
                         <div class="wage-wrapper">
                             <div class="space-area"></div>
                             <div class="wage-area">
                                 <img
                                     src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/img_desktop_company.png"
                                     alt="세금계산서 발행" title="세금계산서 발행" class="wage-img">
-                                <div class="wage">50,000원~</div>
+                                <div class="wage">${post[i].postPayment}</div>
                             </div>
                         </div>
                         <div class="evaluation-area">
@@ -55,7 +61,24 @@ $(document).ready(function () {
             </article>
         `)
     }
+
+
+
 })
+let li = (category) => `
+    <li>
+        <div class="field-content-box">
+            <a href="/post/sort?category=${category}&budget=999999999" class="field-content-link">
+            <div class="field-content">
+            <span class="field-content-span">${category}</span>
+            </div>
+            </a>
+        </div>
+    </li>
+`
+
+
+
 
 /**
  *
@@ -132,4 +155,3 @@ function heart_button(){
 }
 
 
-/*]]>*/
