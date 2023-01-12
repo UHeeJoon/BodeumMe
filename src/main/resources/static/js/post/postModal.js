@@ -32,22 +32,26 @@ function go(e) {
         alert("1개 이상 체크해 주세요");
         return;
     }
-    $($('.modal').siblings()[0])?.data("modal", "not-expand");
-    $('.modal')?.remove();
+    check_modal();
     location.href = `/post/sort?category=${input_category.join(',')}&budget=${input_budget}`
 }
 
 
 function do_modal(target) {
     if ($(target).data("modal") === "not-expand") {
-        $($('.modal')?.siblings()[0])?.data("modal", "not-expand");
-        $('.modal')?.remove();
+        check_modal();
         $(target.parentNode).append(what_modal[target.className])
         $(target).data("modal", "expand");
     } else {
         $('.modal').remove();
         $(target).data("modal", "not-expand");
     }
+}
+
+function check_modal() {
+    let $modal = $('.modal');
+    $($modal?.siblings()[0])?.data("modal", "not-expand");
+    $modal?.remove();
 }
 
 const select =
